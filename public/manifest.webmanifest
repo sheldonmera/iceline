@@ -1,0 +1,16 @@
+{
+  "name": "IceLine Refrigeração",
+  "short_name": "IceLine",
+  "description": "Refrigeracao e climatizacao com atendimento tecnico premium.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#003B73",
+  "theme_color": "#005CB9",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}

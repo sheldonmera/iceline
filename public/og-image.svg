@@ -1,0 +1,9 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1"><stop stop-color="#003B73"/><stop offset="1" stop-color="#005CB9"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="980" cy="120" r="230" fill="#39A8FF" opacity=".26"/>
+  <text x="90" y="292" fill="#fff" font-family="Arial, sans-serif" font-size="92" font-weight="800">IceLine</text>
+  <text x="94" y="372" fill="#BDE7FF" font-family="Arial, sans-serif" font-size="38" font-weight="700">Refrigeracao premium em Campo Grande</text>
+</svg>
