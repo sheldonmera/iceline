@@ -117,7 +117,7 @@ export default function Home() {
         <div className="section-shell">
           <SectionHeading eyebrow="Depoimentos" title="Confiança construída em campo" />
           <div className="grid gap-5 md:grid-cols-3">
-            {testimonials.map((item) => <Reveal key={item.name} className="rounded-[24px] bg-white p-7 shadow-premium"><div className="mb-5 flex gap-1 text-ice">{Array.from({ length: 5 }).map((_, index) => <Star key={index} size={18} fill="currentColor" />)}</div><p className="leading-8 text-slate-700">"{item.quote}"</p><strong className="mt-6 block text-navy">{item.name}</strong><span className="text-sm font-semibold text-brand">{item.role}</span></Reveal>)}
+            {testimonials.map((item) => <Reveal key={item.name} className="rounded-[24px] bg-white p-7 shadow-premium"><div className="mb-5 flex gap-1 text-ice">{Array.from({ length: 5 }).map((_, index) => <Star key={index} size={18} fill="currentColor" />)}</div><p className="leading-8 text-slate-700">&ldquo;{item.quote}&rdquo;</p><strong className="mt-6 block text-navy">{item.name}</strong><span className="text-sm font-semibold text-brand">{item.role}</span></Reveal>)}
           </div>
         </div>
       </section>
