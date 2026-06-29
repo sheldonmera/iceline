@@ -106,7 +106,7 @@ export default function Home() {
 
       <section id="galeria" className="bg-mist py-24">
         <div className="section-shell">
-          <SectionHeading eyebrow="Galeria" title="Imagens de exemplo para trocar quando quiser" />
+          <SectionHeading eyebrow="Galeria" title="Se esfria, esquenta ou lava, conte conosco !" />
           <div className="grid gap-5 md:grid-cols-2">
             {gallery.map((image, index) => <Reveal key={image.src} delay={index * 0.04} className="group overflow-hidden rounded-[28px] shadow-premium"><Image src={image.src} alt={image.alt} width={900} height={620} className="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" /></Reveal>)}
           </div>
