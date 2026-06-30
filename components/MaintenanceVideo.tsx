@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Pause, Play } from "lucide-react";
 import { useRef, useState } from "react";
@@ -32,8 +32,7 @@ export function MaintenanceVideo() {
         ref={videoRef}
         className="h-full w-full object-contain"
         src="/videos/manutencao-profissional.mp4"
-        autoPlay
-        muted
+        controls
         loop
         playsInline
         preload="metadata"

@@ -14,7 +14,7 @@ function escapeHtml(value: string) {
 export async function POST(request: Request) {
   try {
     const payload = contactSchema.parse(await request.json());
-    const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, CONTACT_EMAIL } = process.env;
+    const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SMTP_FROM_EMAIL, SMTP_FROM_NAME, CONTACT_EMAIL } = process.env;
 
     if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS || !CONTACT_EMAIL) {
       return NextResponse.json({ message: "Configuração SMTP incompleta." }, { status: 500 });
@@ -30,6 +30,9 @@ export async function POST(request: Request) {
       }
     });
 
+    const fromEmail = SMTP_FROM_EMAIL || SMTP_USER;
+    const fromName = SMTP_FROM_NAME || "IceLine Site";
+
     const safe = {
       name: escapeHtml(payload.name),
       email: escapeHtml(payload.email),
@@ -39,9 +42,9 @@ export async function POST(request: Request) {
     };
 
     await transporter.sendMail({
-      from: `IceLine Site <${SMTP_USER}>`,
+      from: `${fromName} - ${payload.name} <${fromEmail}>`,
       to: CONTACT_EMAIL,
-      replyTo: payload.email,
+      replyTo: `${payload.name} <${payload.email}>`,
       subject: `Novo contato - ${payload.service}`,
       text: `Nome: ${payload.name}\nE-mail: ${payload.email}\nTelefone: ${payload.phone}\nServiço: ${payload.service}\n\nMensagem:\n${payload.message}`,
       html: `

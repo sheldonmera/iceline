@@ -29,15 +29,30 @@ Acesse `http://localhost:3000`.
 Copie `.env.example` para `.env.local` e preencha:
 
 ```env
-SMTP_HOST=smtp.example.com
+SMTP_HOST=smtp-relay.brevo.com
 SMTP_PORT=587
-SMTP_USER=usuario@example.com
-SMTP_PASS=sua_senha
-CONTACT_EMAIL=contato@iceline.com.br
+SMTP_USER=seu_login_smtp_brevo
+SMTP_PASS=sua_chave_smtp_brevo
+SMTP_FROM_EMAIL=contato@icelinerefrigeracao.com.br
+SMTP_FROM_NAME=IceLine Refrigeração
+CONTACT_EMAIL=contato@icelinerefrigeracao.com.br
 NEXT_PUBLIC_SITE_URL=https://www.icelinerefrigeracao.com.br
 ```
 
-`CONTACT_EMAIL` é o destinatário dos contatos enviados pelo formulário. Para SMTP com SSL normalmente use porta `465`; para TLS/STARTTLS normalmente use `587`.
+`CONTACT_EMAIL` é o destinatário dos contatos enviados pelo formulário. `SMTP_FROM_EMAIL` deve ser um remetente validado/autorizado no Brevo.
+
+### Brevo SMTP
+
+No Brevo, abra a área de SMTP/API, copie o login SMTP e crie ou copie uma chave SMTP. Use:
+
+- `SMTP_HOST=smtp-relay.brevo.com`
+- `SMTP_PORT=587`
+- `SMTP_USER`: login SMTP exibido pelo Brevo
+- `SMTP_PASS`: chave SMTP do Brevo
+- `SMTP_FROM_EMAIL`: e-mail remetente do site, preferencialmente do seu domínio
+- `CONTACT_EMAIL`: e-mail que receberá as mensagens do formulário
+
+Na Vercel, cadastre essas variáveis em `Project Settings` > `Environment Variables` e faça um novo deploy.
 
 ## Personalização
 

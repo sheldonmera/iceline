@@ -13,7 +13,7 @@ export default function Home() {
     <main id="inicio" className="overflow-hidden">
       <Header />
       <section className="relative flex min-h-screen items-center bg-navy pb-16 pt-28 text-white">
-        <Image src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1800&q=85" alt="Técnico especialista em refrigeração trabalhando" fill priority className="object-cover opacity-32" />
+        <Image src="/images/hero-tecnico-refrigeracao.jpeg" alt="Técnico especialista em refrigeração trabalhando" fill priority className="object-cover opacity-32" />
         <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(0,59,115,0.98),rgba(0,92,185,0.78),rgba(57,168,255,0.28))]" />
         <div className="section-shell relative grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr]">
           <Reveal>
